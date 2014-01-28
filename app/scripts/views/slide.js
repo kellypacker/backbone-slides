@@ -6,6 +6,7 @@ define(['backbone'], function (Backbone) {
       this.$el.append(
         '<h1>' + this.model.get("title") + '</h1>'
       );
+      return this;
     }
   });
 
