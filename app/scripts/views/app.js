@@ -1,4 +1,10 @@
-define(['backbone', 'views/slides', 'collections/slides'], function(Backbone, SlidesView, SlidesCollection) {
+define([
+  'backbone',
+  'views/slides',
+  'collections/slides',
+  'router'
+],
+function(Backbone, SlidesView, SlidesCollection, MainRouter) {
   var AppView = Backbone.View.extend({
     el: 'body',
 
@@ -7,9 +13,14 @@ define(['backbone', 'views/slides', 'collections/slides'], function(Backbone, Sl
         { title: 'first slide' },
         { title: 'second slide' }
       ];
+
+      App.router = new MainRouter();
+
       new SlidesView({
         collection: new SlidesCollection(testCollection)
       });
+
+      Backbone.history.start();
     }
   });
 
