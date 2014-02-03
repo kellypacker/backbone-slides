@@ -9,6 +9,8 @@ define(['backbone'], function (Backbone) {
         this.renderBullets();
       } else if ( this.model.get('quote') ) {
         this.renderQuote();
+      } else if ( this.model.get('snippet') ) {
+        this.renderSnippet();
       } else {
         this.renderHeading();
       }
@@ -55,6 +57,23 @@ define(['backbone'], function (Backbone) {
               '</cite>',
             '</figcaption>'
         ].join(''));
+    },
+
+    renderSnippet: function() {
+      var self = this;
+      var snippet = this.model.get('snippet');
+      this.$el.addClass('snippet');
+
+      if ( this.model.get('title') ) {
+        this.renderHeading();
+      }
+
+      $.get(snippet, function(snippet) {
+        self.$el
+          .append( '<pre class="prettyprint">' + _.escape(snippet) + '</pre>' )
+        prettyPrint();
+      });
+
     }
   });
 
