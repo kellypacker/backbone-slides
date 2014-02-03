@@ -15,8 +15,6 @@ function(Backbone, SlidesView, SlidesCollection, MainRouter) {
 
       App.router = new MainRouter();
 
-      console.log(new SlidesCollection(window.slides))
-
       new SlidesView({
         collection: new SlidesCollection(window.slides)
       });
