@@ -12,16 +12,13 @@ function(Backbone, SlidesView, SlidesCollection, MainRouter) {
     },
 
     initialize: function () {
-      var testCollection = [
-        { title: 'first slide' },
-        { title: 'second slide' },
-        { title: 'third slide' }
-      ];
 
       App.router = new MainRouter();
 
+      console.log(new SlidesCollection(window.slides))
+
       new SlidesView({
-        collection: new SlidesCollection(testCollection)
+        collection: new SlidesCollection(window.slides)
       });
 
       Backbone.history.start();
