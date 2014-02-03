@@ -1,4 +1,19 @@
-/* Will be compiled down to a single stylesheet with your sass files */
+@import 'compass/css3'
+*
+  +box-sizing(border-box)
+
+body, html
+  height: 100%
+  overflow: hidden
 
 body
-  background: red
+  text-align: center
+  color: #292929
+  background: -webkit-radial-gradient(center, circle closest-corner, #ffffff 0%, #e66d1a 100%)
+  background: -moz-radial-gradient(center, circle closest-corner, #ffffff 0%, #e66d1a 100%)
+  background: radial-gradient(center, circle closest-corner, #ffffff 0%, #e66d1a 100%)
+
+h1, h2, h3, h4, h5
+  margin-top: 0
+
+@import 'slides'

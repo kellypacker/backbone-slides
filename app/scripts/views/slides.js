@@ -20,7 +20,7 @@ define(['backbone', 'views/slide'], function(Backbone, SlideView){
     changeSlide: function(opts) {
       var self = this;
       var newSlide;
-      var $slides = this.$el.children()
+      var $slides = this.$el.children();
 
       this.setCurrentSlideIndex(opts);
 
@@ -51,7 +51,6 @@ define(['backbone', 'views/slide'], function(Backbone, SlideView){
     animateToNewSlide: function($slides, newSlide, direction) {
       var self = this;
       $slides.filter(':visible')
-        .css('position', 'absolute')
         .animate({
           top: direction === 'next' ? '100%' : '-100%',
           opacity: 'hide'
