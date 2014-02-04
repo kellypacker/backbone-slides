@@ -1,4 +1,4 @@
-define(['backbone', 'helpers'], function (Backbone, Helpers) {
+define(['backbone', 'helpers', 'prettify'], function (Backbone, Helpers, Prettify) {
   var Slide = Backbone.View.extend({
     className: 'slide',
 
@@ -87,10 +87,10 @@ define(['backbone', 'helpers'], function (Backbone, Helpers) {
       var self = this;
       $.get(snippetPath, function(snippet) {
         if ( heading ) {
-          self.$el.append( '<h1>' + heading + '</h1>' )
+          self.$el.append( '<h1>' + heading + '</h1>' );
         }
         self.$el.append( '<pre class="prettyprint">' + _.escape(snippet) + '</pre>' );
-        prettyPrint();
+        Prettify.prettyPrint();
       });
 
     }

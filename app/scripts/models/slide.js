@@ -13,7 +13,6 @@ define(['backbone'], function(Backbone) {
 
     setFontSize: function() {
       var length = this.get("title").length;
-      console.log(length)
       var size;
       if ( length >= 80 ) {
         size = 'x-large';

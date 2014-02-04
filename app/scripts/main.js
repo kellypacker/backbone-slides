@@ -13,7 +13,7 @@ require.config({
   }
 });
 
-require(['views/app', 'prettify'], function (AppView) {
+require(['views/app'], function (AppView) {
   window.App = {
     Vent: _.extend({}, Backbone.Events)
   };
