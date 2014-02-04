@@ -77,7 +77,6 @@ define(['backbone', 'views/slide'], function(Backbone, SlideView){
     },
 
     render: function(slide) {
-      console.log(slide.toJSON())
       var slideView = new SlideView({ model: slide });
       this.$el.append(slideView.render().el);
       return this;

@@ -9,9 +9,17 @@ window.slides = [
     snippet: 'snippets/ex1.css'
   },
   {
+    title: "Some CSS code here",
+    snippet: {
+      CSS: 'snippets/ex1.css',
+      Javascript: 'snippets/ex1.js'
+    }
+  },
+  {
     title: "Some JS code here",
     snippet: 'snippets/ex1.js'
-  },  { quote: "I said something important.", cite: "Kelly Packer"},
+  },
+  { quote: "I said something important.", cite: "Kelly Packer"},
   { title: "Meatload a lto of meat in the browser and another one" },
   { title: "Meatload a lot of meat is meant to be eaten in the browser more and more meat is expected" }
 ];
