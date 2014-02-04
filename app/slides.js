@@ -9,7 +9,6 @@ window.slides = [
     snippet: 'snippets/ex1.css'
   },
   {
-    title: "Some CSS code here",
     snippet: {
       CSS: 'snippets/ex1.css',
       Javascript: 'snippets/ex1.js'
