@@ -8,8 +8,6 @@ define(['backbone'], function (Backbone) {
 
     home: function() {
       App.Vent.trigger("init");
-      console.log("home");
-
     },
 
     showSlide: function(slideIndex) {
